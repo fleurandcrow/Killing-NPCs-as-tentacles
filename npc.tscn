@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/MainGame/Long/npc_move.cs" id="1_4b2hm"]
 [ext_resource type="Texture2D" uid="uid://bpsxmwpkjilqh" path="res://Images/NPC/npc_walk.png" id="3_mc6p2"]
-[ext_resource type="Texture2D" uid="uid://dp7luu07g2bvy" path="res://Images/NPC/npc_awalk1.png" id="5_xxdyy"]
+[ext_resource type="Texture2D" uid="uid://dn51ec61l35eg" path="res://Images/NPC/npc_walk1.png" id="5_xxdyy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_efm8q"]
 radius = 81.0
