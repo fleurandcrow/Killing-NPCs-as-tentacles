@@ -1,0 +1,779 @@
+[gd_scene load_steps=29 format=3 uid="uid://dramnp3yp0qip"]
+
+[ext_resource type="Script" path="res://Scripts/StartMenu/ExitGame.cs" id="1_ntyhw"]
+[ext_resource type="Texture2D" uid="uid://dn1umtdu0vowb" path="res://Images/StartMenu_Art/start_art_npc.png" id="2_4j4af"]
+[ext_resource type="AudioStream" uid="uid://hcknj0bwq6y1" path="res://Audio/FastFeelBananaPeel-320bit(chosic.com).ogg" id="2_5ydyc"]
+[ext_resource type="Script" path="res://Scripts/StartMenu/StartButton.cs" id="2_fqx8e"]
+[ext_resource type="Script" path="res://Scripts/StartMenu/SettingsButton.cs" id="2_tv2ki"]
+[ext_resource type="FontFile" uid="uid://do5f77285qkek" path="res://Fonts/Rajdhani-Medium.ttf" id="2_wvs5k"]
+[ext_resource type="Script" path="res://Scripts/StartMenu/CreditsButton.cs" id="3_j8uho"]
+[ext_resource type="Texture2D" uid="uid://boogwotv7q7s5" path="res://Images/StartMenu_Art/tenta1.png" id="3_lot2x"]
+[ext_resource type="Script" path="res://Scripts/StartMenu/TentaStart.cs" id="3_myc82"]
+[ext_resource type="FontFile" uid="uid://saikg0wkbrh8" path="res://Fonts/Rajdhani-Regular.ttf" id="4_3jmmo"]
+[ext_resource type="Script" path="res://Scripts/StartMenu/MusicVolumeStart.cs" id="4_4msi5"]
+[ext_resource type="Texture2D" uid="uid://bvny27vihui2e" path="res://Images/StartMenu_Art/tenta2.png" id="4_ar6eh"]
+[ext_resource type="Script" path="res://Scripts/StartMenu/SFXVolumeStart.cs" id="5_1kor0"]
+[ext_resource type="Texture2D" uid="uid://bjhekbqv1863e" path="res://Images/StartMenu_Art/tenta3.png" id="5_8iwid"]
+[ext_resource type="Texture2D" uid="uid://bagpak0fsv146" path="res://Images/StartMenu_Art/tenta4.png" id="6_8albj"]
+[ext_resource type="Script" path="res://Scripts/StartMenu/MenuMusic.cs" id="6_6677f"]
+[ext_resource type="Texture2D" uid="uid://dxiko2p6v1b5s" path="res://Images/StartMenu_Art/tenta5.png" id="7_g5uwd"]
+[ext_resource type="FontFile" uid="uid://dheyeajdknffv" path="res://Fonts/Rajdhani-Light.ttf" id="7_gws5b"]
+[ext_resource type="Script" path="res://Scripts/StartMenu/BackButton.cs" id="8_e4cl2"]
+[ext_resource type="Texture2D" uid="uid://c8mxh0f4r16ji" path="res://Images/StartMenu_Art/tenta6.png" id="8_mu7nh"]
+[ext_resource type="Texture2D" uid="uid://dme7tal6yl7iq" path="res://Images/StartMenu_Art/tenta7.png" id="9_tunnl"]
+[ext_resource type="Texture2D" uid="uid://bec0opk1nsm81" path="res://Images/StartMenu_Art/tenta8.png" id="10_3r0fq"]
+[ext_resource type="Texture2D" uid="uid://dxb3ajdawf7bc" path="res://Images/StartMenu_Art/tenta9.png" id="11_r2soo"]
+[ext_resource type="Texture2D" uid="uid://14vqhg5lbjvl" path="res://Images/StartMenu_Art/start_shadow.png" id="12_2eto3"]
+[ext_resource type="FontFile" uid="uid://bxkfw2b2amqb2" path="res://Fonts/Rajdhani-Bold.ttf" id="14_hpwru"]
+
+[sub_resource type="Animation" id="Animation_un03g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tenta1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tenta2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tenta3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("tenta4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("tenta5:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("tenta6:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("tenta6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("tenta7:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("tenta8:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("tenta8:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("tenta9:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("tenta9:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("tenta6:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 648)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("tenta8:size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 648)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("tenta9:size")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_ijwqb"]
+resource_name = "tenta1"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tenta1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0523599, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tenta2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0255053, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tenta3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.120427, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("tenta4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0247133, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("tenta5:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0121776, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("tenta6:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.168831, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("tenta6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-87, 219), Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("tenta7:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0359209, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("tenta8:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.065966, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("tenta8:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-15, 68), Vector2(0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("tenta9:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0865037, 0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("tenta9:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(5, -156), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5tk1p"]
+_data = {
+"RESET": SubResource("Animation_un03g"),
+"tenta1": SubResource("Animation_ijwqb")
+}
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NPC" type="TextureRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -11.0
+offset_right = 46.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.992913, 1)
+texture = ExtResource("2_4j4af")
+expand_mode = 1
+
+[node name="Tentacles" type="Control" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_myc82")
+
+[node name="TentaAnim" type="AnimationPlayer" parent="BG/Tentacles"]
+libraries = {
+"": SubResource("AnimationLibrary_5tk1p")
+}
+
+[node name="tenta1" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_lot2x")
+expand_mode = 1
+
+[node name="tenta2" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ar6eh")
+expand_mode = 1
+
+[node name="tenta3" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_8iwid")
+expand_mode = 1
+
+[node name="tenta4" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_8albj")
+expand_mode = 1
+
+[node name="tenta5" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_g5uwd")
+expand_mode = 1
+
+[node name="tenta6" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_mu7nh")
+expand_mode = 1
+
+[node name="tenta7" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_tunnl")
+expand_mode = 1
+
+[node name="tenta8" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_3r0fq")
+expand_mode = 1
+
+[node name="tenta9" type="TextureRect" parent="BG/Tentacles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_r2soo")
+expand_mode = 1
+
+[node name="Shadow" type="TextureRect" parent="BG"]
+modulate = Color(1, 1, 1, 0.803922)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_2eto3")
+expand_mode = 1
+
+[node name="StartMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="StartMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = 38.0
+offset_right = 129.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wvs5k")
+theme_override_font_sizes/font_size = 30
+text = "Start Killing!"
+script = ExtResource("2_fqx8e")
+
+[node name="CreditsButton" type="Button" parent="StartMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -136.0
+offset_right = -154.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_3jmmo")
+theme_override_font_sizes/font_size = 20
+text = "Credits"
+flat = true
+script = ExtResource("3_j8uho")
+
+[node name="SettingsButton" type="Button" parent="StartMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 152.0
+offset_top = -139.0
+offset_right = 318.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_3jmmo")
+theme_override_font_sizes/font_size = 20
+text = "Settings"
+flat = true
+script = ExtResource("2_tv2ki")
+
+[node name="ExitGame" type="Button" parent="StartMenu"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -44.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 44.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("7_gws5b")
+theme_override_font_sizes/font_size = 25
+text = "x"
+icon_alignment = 1
+script = ExtResource("1_ntyhw")
+
+[node name="Ready" type="Label" parent="StartMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -343.0
+offset_top = -138.0
+offset_right = 341.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0.811765, 1)
+theme_override_constants/shadow_offset_x = -4
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_wvs5k")
+theme_override_font_sizes/font_size = 50
+text = "Are you ready to kill those NPC's?"
+horizontal_alignment = 1
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5ydyc")
+volume_db = -12.885
+autoplay = true
+script = ExtResource("6_6677f")
+
+[node name="Settings" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicVolume" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -291.0
+offset_top = -28.0
+offset_right = 421.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 80.0
+value = 50.0
+script = ExtResource("4_4msi5")
+
+[node name="SFXVolume" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = 64.0
+offset_right = 422.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 80.0
+value = 50.0
+script = ExtResource("5_1kor0")
+
+[node name="MusicVolTxt" type="Label" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.0
+offset_top = -25.0
+offset_right = -310.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_3jmmo")
+theme_override_font_sizes/font_size = 20
+text = "Music volume"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SFXVolTxt" type="Label" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -429.0
+offset_top = 69.0
+offset_right = -307.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_3jmmo")
+theme_override_font_sizes/font_size = 20
+text = "SFX volume"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="Settings"]
+layout_mode = 1
+offset_right = 35.0
+offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("7_gws5b")
+theme_override_font_sizes/font_size = 20
+text = "<--"
+script = ExtResource("8_e4cl2")
+
+[node name="Credits" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsText" type="RichTextLabel" parent="Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.5
+offset_top = -204.5
+offset_right = 400.5
+offset_bottom = 204.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_wvs5k")
+theme_override_fonts/bold_font = ExtResource("14_hpwru")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "All audio used in this project belong to copyright free sources.
+
+Audio credits:
+
+Yay by Sakura Girl | [url]https://soundcloud.com/sakuragirl_official/yay[/url]
+Clown by Sakura Girl | [url]https://www.chosic.com/download-audio/53609/[/url]
+Fast Feel Banana Peel by Alexander Nakarada | [url]https://creatorchords.com[/url]
+Music promoted on [url]https://www.chosic.com/free-music/all/[/url]
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+[url]https://creativecommons.org/licenses/by/4.0/[/url]
+
+Wilhelm Scream by BigSoundBlank | [url]https://www.chosic.com/download-audio/58053/[/url]
+Gore video game blood splash from Mixkit | [url]https://mixkit.co/free-sound-effects/splash/[/url]
+
+Font credits:
+
+Rajdhani from Google Fonts | [url]https://fonts.google.com/specimen/Rajdhani[/url] 
+
+All sprites were drawn by yours truly | Fleurandcrow"
+
+[node name="BackButton" type="Button" parent="Credits"]
+layout_mode = 0
+offset_right = 35.0
+offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("7_gws5b")
+theme_override_font_sizes/font_size = 20
+text = "<--"
+script = ExtResource("8_e4cl2")

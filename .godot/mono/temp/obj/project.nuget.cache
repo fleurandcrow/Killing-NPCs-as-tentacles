@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "eWaRjAX/XLz0y+7b6XfF8l/v3w2f+6MporX2zSPa61DRT9xTAtZqDXXLkvC8zkP1ODc5ezhplJs8HjfCGQecWw==",
+  "success": true,
+  "projectFilePath": "/home/fleur/Desktop/Programs/Godot Games/Killing_NPCs_as_tentacles/Killing Npc-s With Tentacles.csproj",
+  "expectedPackageFiles": [
+    "/home/fleur/.nuget/packages/godot.sourcegenerators/4.2.2/godot.sourcegenerators.4.2.2.nupkg.sha512",
+    "/home/fleur/.nuget/packages/godotsharp/4.2.2/godotsharp.4.2.2.nupkg.sha512",
+    "/home/fleur/.nuget/packages/godotsharpeditor/4.2.2/godotsharpeditor.4.2.2.nupkg.sha512",
+    "/home/fleur/.nuget/packages/microsoft.netcore.app.ref/6.0.33/microsoft.netcore.app.ref.6.0.33.nupkg.sha512",
+    "/home/fleur/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.33/microsoft.aspnetcore.app.ref.6.0.33.nupkg.sha512"
+  ],
+  "logs": []
+}

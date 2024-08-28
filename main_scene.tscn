@@ -1,0 +1,294 @@
+[gd_scene load_steps=24 format=3 uid="uid://dwgi52hheu3m"]
+
+[ext_resource type="Script" path="res://Scripts/MainGame/Long/collision_manager.cs" id="1_v0ofs"]
+[ext_resource type="Texture2D" uid="uid://d2li32sfx3drb" path="res://Images/floor.png" id="2_6vip3"]
+[ext_resource type="PackedScene" uid="uid://bkn0fci6jyxe" path="res://npc.tscn" id="2_jj4w5"]
+[ext_resource type="PackedScene" uid="uid://cjlx8wqdm6l0f" path="res://tentacle.tscn" id="3_k722t"]
+[ext_resource type="Texture2D" uid="uid://5liqurcsvtua" path="res://Images/floorshadow.png" id="5_3d46v"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Long/PauseMenu.cs" id="5_6ymkl"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Long/GameSettingsButton.cs" id="6_2qoqr"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Long/Reset.cs" id="6_pynws"]
+[ext_resource type="FontFile" uid="uid://do5f77285qkek" path="res://Fonts/Rajdhani-Medium.ttf" id="7_w42g0"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Short/BackToStart.cs" id="8_av7hx"]
+[ext_resource type="AudioStream" uid="uid://wjko8tl2odr4" path="res://Audio/Sakura-Girl-Yay-chosic.com_.ogg" id="9_3ndg5"]
+[ext_resource type="FontFile" uid="uid://bxkfw2b2amqb2" path="res://Fonts/Rajdhani-Bold.ttf" id="9_fep58"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Long/MusicVolume.cs" id="9_jwmdd"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Short/DefaultBGM.cs" id="10_8irgu"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Long/SFXVolume.cs" id="10_ma6y3"]
+[ext_resource type="AudioStream" uid="uid://cf8yw8ourp1mv" path="res://Audio/Clown(chosic.com).ogg" id="11_jley0"]
+[ext_resource type="AudioStream" uid="uid://duwsebhvgbqc5" path="res://Audio/mixkit-gore-video-game-blood-splash-263.wav" id="12_p8om8"]
+[ext_resource type="AudioStream" uid="uid://d1umxxpqwt6wf" path="res://Audio/Wilhelm-scream-chosic.com_.wav" id="13_hho8y"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Short/PleaseJustDisable.cs" id="14_2d80h"]
+[ext_resource type="FontFile" uid="uid://saikg0wkbrh8" path="res://Fonts/Rajdhani-Regular.ttf" id="14_8in0x"]
+[ext_resource type="FontFile" uid="uid://dheyeajdknffv" path="res://Fonts/Rajdhani-Light.ttf" id="14_vkb77"]
+[ext_resource type="Script" path="res://Scripts/MainGame/Long/YesButton.cs" id="14_xw3d8"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_aw4ay"]
+a = Vector2(27, -530)
+b = Vector2(27, 501)
+
+[node name="main_scene" type="Node2D"]
+script = ExtResource("1_v0ofs")
+
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(791, 848)
+scale = Vector2(2.50781, 0.985)
+texture = ExtResource("2_6vip3")
+
+[node name="NPC" parent="." instance=ExtResource("2_jj4w5")]
+position = Vector2(-483, 295)
+
+[node name="Tentacle" parent="." groups=["player"] instance=ExtResource("3_k722t")]
+position = Vector2(578, 1044)
+
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(876, 735)
+scale = Vector2(3.242, 1.34469)
+texture = ExtResource("5_3d46v")
+
+[node name="UhOh" type="Node" parent="."]
+script = ExtResource("14_2d80h")
+
+[node name="ThePanel" type="Panel" parent="UhOh"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.5
+offset_top = -123.5
+offset_right = 165.5
+offset_bottom = 123.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YesButton1" type="Button" parent="UhOh"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = 32.0
+offset_right = -14.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_w42g0")
+theme_override_font_sizes/font_size = 20
+text = "yes"
+script = ExtResource("14_xw3d8")
+
+[node name="YesButton2" type="Button" parent="UhOh"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = 32.0
+offset_right = 116.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_w42g0")
+theme_override_font_sizes/font_size = 20
+text = "yes"
+script = ExtResource("14_xw3d8")
+
+[node name="KillThem" type="Label" parent="UhOh"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -68.0
+offset_right = 123.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_fep58")
+theme_override_font_sizes/font_size = 25
+text = "Do you like killing those worthless NPCs?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="GUI" type="Node" parent="."]
+
+[node name="PauseMenu" type="Node" parent="GUI"]
+process_mode = 2
+script = ExtResource("5_6ymkl")
+
+[node name="Panel" type="Panel" parent="GUI/PauseMenu"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackToStart" type="Button" parent="GUI/PauseMenu"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.288
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -3.62399
+offset_right = 128.0
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("14_vkb77")
+theme_override_font_sizes/font_size = 30
+text = "Back to start"
+script = ExtResource("8_av7hx")
+
+[node name="Reset" type="Button" parent="GUI/PauseMenu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -66.0
+offset_right = 129.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("14_vkb77")
+theme_override_font_sizes/font_size = 30
+text = "Reset"
+script = ExtResource("6_pynws")
+
+[node name="MusicVolume" type="HSlider" parent="GUI/PauseMenu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 54.0
+offset_right = 412.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 80.0
+value = 50.0
+script = ExtResource("9_jwmdd")
+
+[node name="SFXVolume" type="HSlider" parent="GUI/PauseMenu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = 146.0
+offset_right = 413.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 80.0
+value = 50.0
+script = ExtResource("10_ma6y3")
+
+[node name="MusicVolTxt" type="Label" parent="GUI/PauseMenu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -441.0
+offset_top = 58.0
+offset_right = -319.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("14_8in0x")
+theme_override_font_sizes/font_size = 20
+text = "Music volume"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SFXVolTxt" type="Label" parent="GUI/PauseMenu"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -438.0
+offset_top = 152.0
+offset_right = -316.0
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("14_8in0x")
+theme_override_font_sizes/font_size = 20
+text = "SFX volume"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="GameSettingsButton" type="Button" parent="GUI"]
+process_mode = 3
+offset_left = 56.0
+offset_top = 1.0
+offset_right = 111.0
+offset_bottom = 56.0
+rotation = 1.5708
+theme_override_font_sizes/font_size = 30
+text = "lll"
+flat = true
+script = ExtResource("6_2qoqr")
+
+[node name="KillCount" type="Label" parent="GUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -81.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("14_8in0x")
+theme_override_font_sizes/font_size = 30
+text = "Kill count: 69"
+
+[node name="Boundary" type="StaticBody2D" parent="."]
+position = Vector2(1358, 37)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" groups=["boundary"]]
+position = Vector2(884, 316)
+shape = SubResource("SegmentShape2D_aw4ay")
+
+[node name="DefaultBGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_3ndg5")
+volume_db = -24.85
+script = ExtResource("10_8irgu")
+
+[node name="BGMTooMany" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_jley0")
+volume_db = -23.01
+
+[node name="NPCBloodSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_p8om8")
+volume_db = -13.805
+
+[node name="NPCScreamSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_hho8y")
+volume_db = -18.407
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0

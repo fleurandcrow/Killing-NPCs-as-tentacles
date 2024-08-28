@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkn0fci6jyxe"]
+
+[ext_resource type="Script" path="res://Scripts/MainGame/Long/npc_move.cs" id="1_4b2hm"]
+[ext_resource type="Texture2D" uid="uid://bpsxmwpkjilqh" path="res://Images/NPC/npc_walk.png" id="3_mc6p2"]
+[ext_resource type="Texture2D" uid="uid://dp7luu07g2bvy" path="res://Images/NPC/npc_awalk1.png" id="5_xxdyy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_efm8q"]
+radius = 81.0
+height = 458.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u2eft"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mc6p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xxdyy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[node name="NPC" type="CharacterBody2D" groups=["npc"]]
+script = ExtResource("1_4b2hm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-14, 11)
+shape = SubResource("CapsuleShape2D_efm8q")
+one_way_collision_margin = 0.0
+
+[node name="AnimatedNPC" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_u2eft")
+animation = &"walk"
+frame = 1
+frame_progress = 0.676251
