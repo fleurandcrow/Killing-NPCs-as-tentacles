@@ -53,7 +53,7 @@ For more information, visit [CC BY-NC-ND 4.0](https://creativecommons.org/licens
 
 ### Audio credits
 
-None of the music and sounds effects used in this project have been sourced from royalty free sources and were not created by the project's creator.
+All of the music and sounds effects used in this project have been sourced from royalty free sources and were not created by the project's creator.
 
 See [credits.txt](credits.txt) for more information.
 
